@@ -1,0 +1,871 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Elephant";
+  src: url("fonts/ELEPHNT.TTF");
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: #e0e0e0;
+  font-size: 14px;
+}
+
+a {
+  text-decoration: none;
+}
+
+#v_modal {
+  width: 90%;
+  height: 80vh;
+  background: rgb(217, 97, 97);
+  background: linear-gradient(90deg, #d96161, #fcb045);
+  border-radius: 6px;
+  position: fixed;
+  top: -100vh;
+  left: 5%;
+  font-size: 10px;
+  z-index: 100;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 2em;
+  box-shadow: 0.5px 0.5px 10px grey;
+  text-align: center;
+}
+
+#v_modal span {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  cursor: pointer;
+}
+
+#v_modal h1 {
+  width: 100%;
+  font-family: "Elephant", serif;
+}
+
+#v_modal img {
+  width: 30%;
+}
+
+#v_modal a {
+  background-color: white;
+  color: #333333;
+  font-weight: bold;
+  padding: 0.5em 1.5em;
+  border-radius: 6px;
+  transition: 0.5s;
+  border: 1.5px solid transparent;
+}
+
+#v_modal a:hover {
+  border: 1.5px solid white;
+  color: white;
+  background-color: #333333;
+}
+
+.cabeza {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  padding: 2em 5em;
+}
+
+#dyn {
+  height: 25px;
+  width: 45px;
+  background: orange;
+  border-radius: 1000px;
+  position: absolute;
+  right: 80px;
+  cursor: pointer;
+  color: white;
+}
+
+#dyn span {
+  vertical-align: middle;
+}
+
+#dyn div {
+  height: 23px;
+  width: 23px;
+  background-color: white;
+  border-radius: 60%;
+  position: absolute;
+  top: 1px;
+  left: 1px;
+}
+
+.dark {
+  background-color: #2f3439;
+  color: white;
+}
+
+#recetas a.black,
+select.black,
+#buscar_recetas.black,
+.ingredientes.black,
+.pasos.black,
+.infobig.black,
+.secondinfobig.black {
+  background-color: #7c7c7c;
+  color: white;
+}
+
+.whitext {
+  color: white;
+}
+
+.logo {
+  width: 100%;
+}
+
+.logo h3 {
+  font-size: 2em;
+  font-weight: 700;
+  font-family: "Nunito", sans-serif;
+  vertical-align: middle;
+}
+
+.logo a {
+  color: white;
+}
+
+header {
+  padding: 1.5em 0px;
+  position: absolute;
+  width: 100%;
+}
+
+.logo img {
+  width: 55px;
+}
+
+.contenedor {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 95%;
+  margin: auto;
+  max-width: 1200px;
+}
+
+nav {
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 50px;
+  width: 100%;
+  padding: 1em 1.5em;
+  background-color: rgba(255, 255, 255, 0.8);
+  justify-content: space-evenly;
+}
+
+nav a {
+  color: white;
+  font-weight: 600;
+  border-bottom: 2px transparent solid;
+  transition: 0.4s;
+}
+
+nav a:hover {
+  color: white;
+  border-bottom: 2px orange solid;
+}
+
+.active {
+  color: white;
+  border-bottom: 2px orange solid;
+}
+
+.banner {
+  background: url(img/reslider/capa1.jpg) center center / cover;
+  animation: slider 35s 6s infinite;
+  height: 250px;
+  margin-bottom: 2em;
+}
+
+@keyframes slider {
+  0% {
+    background-image: url(img/reslider/capa1.jpg);
+  }
+  30% {
+    background-image: url(img/reslider/capa2.jpg);
+  }
+  60% {
+    background-image: url(img/reslider/capa3.jpg);
+  }
+  80% {
+    background-image: url(img/reslider/capa4.jpg);
+  }
+  100% {
+    background-image: url(img/reslider/capa5.jpg);
+  }
+}
+
+.titulo {
+  text-align: center;
+  padding: 1em 2em;
+  font-family: "Elephant", serif;
+  font-weight: 200;
+}
+
+.infobig {
+  margin: auto;
+  width: 100%;
+  height: 500px;
+  padding: 2em;
+  background-color: white;
+  border-radius: 6px;
+  margin-bottom: 2em;
+  text-align: center;
+}
+
+h4 {
+  font-family: "Elephant", serif;
+  font-weight: 200;
+}
+
+.infobig input {
+  padding: 1em;
+  border: 1.5px #7c7c7c solid;
+  outline: none;
+  margin: 2em 1.5em 1.5em 0em;
+  border-radius: 6px;
+}
+
+.orangebt {
+  display: inline-block;
+  padding: 0.5em 1.5em;
+  background-color: orange;
+  border-radius: 6px;
+  font-weight: bold;
+  color: #2f3439;
+  border: 1.5px solid transparent;
+  transition: 0.5s;
+}
+
+.orangebt:hover {
+  border: 1.5px solid white;
+  color: white;
+  background-color: #333333;
+}
+
+.infobig img {
+  width: 45%;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.7));
+}
+
+.secondinfobig {
+  display: none;
+}
+
+#buscar_recetas {
+  padding: 1em;
+  border: 1.5px solid transparent;
+  outline: none;
+  font-weight: bold;
+  border-radius: 6px;
+  background: white;
+  width: 90%;
+  margin-bottom: 2em;
+}
+
+#filtro_horas {
+  display: flex;
+  width: 300px;
+  justify-content: space-between;
+  cursor: pointer;
+  margin-bottom: 2em;
+}
+
+#filtro_horas p {
+  margin: 0px;
+  font-size: 12px;
+  position: absolute;
+}
+
+#filtro_horas img {
+  width: 44px;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+select {
+  padding: 1em;
+  outline: none;
+  border: transparent;
+  color: #333333;
+  font-weight: bold;
+  border-radius: 6px;
+  width: 90%;
+}
+
+#recetas {
+  margin-top: 2em;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+#recetas a {
+  width: 40%;
+  height: 30%;
+  padding: 2em;
+  font-size: 10px;
+  background-color: white;
+  border-radius: 6px;
+  margin-bottom: 2em;
+  text-align: center;
+  transition: box-shadow 0.3s ease-in-out;
+}
+#recetas a:hover {
+  box-shadow: 2px 2px 30px 0.5px rgba(0, 0, 0, 0.1);
+}
+
+#recetas a article {
+  color: #333333;
+}
+#recetas a article h2 {
+  font-family: "Elephant", serif;
+  font-weight: 100;
+}
+
+#recetas p {
+  display: none;
+  margin-top: 0.5em;
+}
+
+#recetas article img {
+  width: 60%;
+  margin-top: 1em;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.7));
+}
+
+.destacadas {
+  margin-top: 2em;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.destacadas a {
+  width: 100%;
+  height: 360px;
+  padding: 2em;
+  font-size: 10px;
+  background-color: #8e89df;
+  border-radius: 6px;
+  margin-bottom: 2em;
+  text-align: center;
+  transition: box-shadow 0.4s ease-in-out;
+}
+
+.destacadas a:hover {
+  box-shadow: 2px 2px 30px 0.5px rgba(39, 28, 223, 0.3);
+}
+
+.destacadas a article {
+  color: white;
+}
+
+.destacadas article img {
+  width: 250px;
+  margin-top: 2em;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.7));
+}
+
+.oculto {
+  display: none;
+}
+
+/*ampliacion*/
+.individuales {
+  width: 95%;
+}
+
+.img_individual {
+  display: flex;
+}
+.prin_ampliacion {
+  width: 90%;
+}
+
+.individuales small {
+  margin: 1em 5em 0em 0em;
+}
+
+.individuales p {
+  margin: 1em 1em 2em 0em;
+}
+.ingredientes {
+  margin-bottom: 2em;
+  line-height: 1.5em;
+  border-radius: 6px;
+  color: #333333;
+  list-style: none;
+  background-color: white;
+  padding: 1em;
+}
+
+.pasos {
+  line-height: 1.5em;
+  border-radius: 6px;
+  color: #333333;
+  list-style: none;
+  background-color: white;
+  padding: 1em;
+  margin-bottom: 2em;
+}
+
+.individuales h2,
+.individuales h3,
+.individuales h5 {
+  margin-bottom: 10px;
+  font-family: "Elephant", serif;
+  font-weight: 200;
+}
+
+.individuales .orangebt {
+  display: block;
+  text-align: center;
+  margin-top: 1em;
+}
+
+.individuales .orangebt p {
+  margin: 0px;
+}
+
+.pasosrecetas {
+  display: flex;
+  width: 80%;
+}
+.pasosrecetas img {
+  width: 200px;
+  height: 180px;
+}
+
+/*penultima seccion*/
+
+.recibir_info {
+  padding: 3em;
+  text-align: center;
+  background: #2f3439;
+  color: white;
+  margin-top: 3em;
+}
+
+.recibir_info h3 {
+  display: inline-block;
+}
+
+.recibir_info input {
+  padding: 1em;
+  border: none;
+  outline: none;
+  margin: 2em 1.5em 1.5em 0em;
+  border-radius: 6px;
+}
+
+.recibir_info img {
+  width: 100px;
+}
+
+.recibir_info a {
+  display: inline-block;
+  padding: 0.5em 1.5em;
+  background-color: orange;
+  border-radius: 6px;
+  font-weight: bold;
+  color: #2f3439;
+  border: 1.5px solid transparent;
+  transition: 0.5s;
+}
+
+.recibir_info a:hover {
+  border: 1.5px solid white;
+  color: white;
+  background-color: #333333;
+}
+
+/*contacto*/
+
+.info_contacto {
+  display: none;
+  width: 95%;
+  background: linear-gradient(90deg, #d96161, #fcb045);
+  color: white;
+  border-radius: 6px;
+  padding: 1.5em;
+  min-width: 238px;
+  margin: auto;
+}
+
+.info_contacto p {
+  margin-bottom: 1em;
+}
+
+/*footer*/
+
+footer {
+  background: #d07522;
+  font-weight: bold;
+  color: #333333;
+  padding: 1.3em;
+  text-align: center;
+}
+
+footer a {
+  display: inline-block;
+  color: white;
+  width: 55px;
+  height: 55px;
+  border-radius: 6%;
+  transition: 0.5s;
+  margin-right: 3em;
+}
+
+@media all and (min-width: 767px) {
+  .contenedor {
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    width: 95%;
+    margin: auto;
+    max-width: 1200px;
+  }
+
+  #v_modal {
+    width: 60%;
+    font-size: 1em;
+    left: 20%;
+  }
+
+  .cabeza {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2em 5em;
+  }
+
+  .logo {
+    width: 15%;
+  }
+
+  .logo h3 {
+    display: inline-block;
+    font-size: 2em;
+    font-weight: 700;
+    font-family: "Nunito", sans-serif;
+    vertical-align: middle;
+  }
+
+  .logo img {
+    margin-right: 0.5em;
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  nav {
+    width: 30%;
+    padding: 0px;
+    background: transparent;
+  }
+
+  #recetas {
+    justify-content: space-between;
+  }
+
+  #recetas a {
+    width: 48%;
+    height: 300px;
+    background-color: white;
+    text-align: left;
+    font-size: 1em;
+  }
+
+  #recetas p {
+    display: inline-block;
+    width: 50%;
+    margin-top: 0.5em;
+  }
+
+  #recetas article img {
+    width: 40%;
+    float: right;
+    margin-top: -50px;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.7));
+  }
+  .recibir_info img {
+    float: left;
+    width: 100px;
+  }
+
+  .infobig {
+    margin: 0%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 70%;
+    height: 350px;
+    padding: 2em;
+    background-color: white;
+    border-radius: 6px;
+    margin-bottom: 2em;
+    text-align: left;
+  }
+
+  .infobig a {
+    display: inline-block;
+    padding: 0.5em 1.5em;
+    background-color: orange;
+    border-radius: 6px;
+    font-weight: bold;
+    color: #2f3439;
+  }
+
+  .infobig div:nth-of-type(1) {
+    width: 60%;
+  }
+
+  .infobig img {
+    width: 75%;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.7));
+  }
+
+  .infobig div:nth-of-type(2) {
+    width: 60%;
+    text-align: right;
+  }
+
+  .secondinfobig {
+    display: inline-block;
+    width: 26%;
+    height: 350px;
+    padding: 2em;
+    background-color: white;
+    border-radius: 6px;
+    margin-bottom: 2em;
+    text-align: left;
+    font-size: 12px;
+  }
+  .secondinfobig img {
+    width: 65%;
+    margin-bottom: 2em;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.7));
+  }
+  .secondinfobig div {
+    text-align: center;
+  }
+  .secondinfobig h3 {
+    margin-bottom: 2em;
+  }
+
+  #buscar_recetas {
+    width: 45%;
+    margin: 0px;
+  }
+
+  #filtro_horas {
+    margin-bottom: 0px;
+  }
+
+  select {
+    width: 20%;
+  }
+
+  .destacadas a {
+    width: 45%;
+    height: 280px;
+  }
+
+  .destacadas article img {
+    width: 220px;
+  }
+
+  .oculto {
+    display: inline-block;
+  }
+
+  .individuales {
+    width: 50%;
+  }
+
+  .prin_ampliacion {
+    width: 100%;
+  }
+}
+
+@media all and (min-width: 1366px) {
+  .banner {
+    background: url(img/primerslider/foto1.jpg) center bottom / cover;
+    animation: slider 35s 6s infinite;
+    height: 450px;
+    margin-bottom: 2em;
+  }
+
+  @keyframes slider {
+    0% {
+      background-image: url(img/primerslider/foto1.jpg);
+    }
+    30% {
+      background-image: url(img/primerslider/foto2.jpg);
+    }
+    60% {
+      background-image: url(img/primerslider/foto3.jpg);
+    }
+    80% {
+      background-image: url(img/primerslider/foto4.jpg);
+    }
+    100% {
+      background-image: url(img/primerslider/foto5.jpg);
+    }
+  }
+
+  .contenedor {
+    justify-content: space-around;
+    width: 95%;
+  }
+
+  #recetas a {
+    width: 30%;
+    height: 300px;
+    padding: 2em;
+  }
+
+  #recetas article img {
+    margin-top: -10px;
+  }
+
+  .destacadas a {
+    width: 30%;
+    height: 280px;
+  }
+
+  .destacadas article img {
+    width: 200px;
+  }
+
+  .destacadas {
+    justify-content: space-between;
+  }
+}
+
+.contenedorform {
+  width: 90%;
+  margin: auto;
+  margin-top: 1em;
+  display: flex;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.ctn-form {
+  width: 80%;
+  padding: 40px;
+  background: #f7f7f7;
+}
+
+label {
+  display: block;
+  margin-top: 30px;
+  font-size: 16px;
+  font-weight: 300;
+  color: #7a7a7a;
+}
+
+input[type="text"],
+input[type="password"],
+input [type="number"] {
+  width: 100%;
+  height: 20px;
+  background: rgba(0, 0, 0, 0);
+  border: 0px;
+  outline: 0px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+  color: #e30f87;
+  font-size: 16px;
+}
+
+input[type="submit"] {
+  width: 100%;
+  border-radius: 6px;
+  height: 50px;
+  margin-top: 1.5em;
+  color: white;
+  border: 0px;
+  background: linear-gradient(90deg, #d96161, #fcb045, #d96161);
+  font-weight: 300;
+  cursor: pointer;
+  font-size: 18px;
+  transition: 1s ease-in;
+  background-size: 300%;
+  background-position: left;
+  outline: none;
+}
+
+input[type="submit"]:hover {
+  background-position: right;
+}
+
+.textoform {
+  width: 100%;
+  background-image: url(img/img1.jpg);
+  background-position: center;
+  background-size: cover;
+  padding: 30px;
+  position: relative;
+}
+
+.capa {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(90deg, #d96161, #fcb045);
+  opacity: 0.8;
+}
+
+.textoform h2 {
+  position: relative;
+  font-family: "Elephant", serif;
+  top: 1em;
+  color: white;
+  font-weight: 300;
+  font-size: 5em;
+}
+
+.textoform p {
+  position: relative;
+  top: 90px;
+  color: white;
+  font-size: 16px;
+  margin-top: 2em;
+}
+
+@media all and (max-width: 800px) {
+  .info_contacto {
+    display: inline-block;
+  }
+
+  .textoform {
+    display: none;
+  }
+
+  .ctn-form {
+    margin: auto;
+    width: 100%;
+    background: white;
+  }
+}

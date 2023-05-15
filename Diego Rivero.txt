@@ -1,0 +1,18 @@
+Diego Rivero
+Nº 247222
+
+Entrega Diseño Web 2.
+
+link de github: https://diegomrb.github.io/dise-oweb2/
+
+Intenté colocar las imagenes de los pasos de cada receta de forma dinamica en ampliacion.html, 
+pero me daba error el codigo js. Tuve que borrar las carpetas con esas fotos ya que no 
+estaban funcionando y ocupaban espacio inecesariamente.
+
+Link de drive: 
+
+https://drive.google.com/file/d/1wWsrA8wjqRu34pv1PNE9Oj416k83myhP/view?usp=sharing
+
+
+El archive pesa aproximadamente 54mb.
+Debe tener los siguientes materiales.
